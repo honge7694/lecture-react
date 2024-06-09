@@ -3,12 +3,23 @@ import Header from './components/Header';
 import SearchForm from './components/SearchForm';
 
 export default class App extends React.Component {
+	search(searchKeyword) {
+		console.log("TODO: ", searchKeyword);
+	}
+	
+	handleReset() {
+		console.log("TODO: handleReset");
+	}
+	
 	render() {
 		return (
 			<>
 				<Header title="검색"/>
 				<div className='container'>
-					<SearchForm />
+					<SearchForm 
+						onSubmit={(searchKeyword) => this.search(searchKeyword)} 
+						onReset={() => this.handleReset()}
+					/>
 				</div>
 			</>
 		);
